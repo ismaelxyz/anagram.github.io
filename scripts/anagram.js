@@ -73,20 +73,8 @@ let EditWord = {
       y: this.state.y - event.y
     }
 
-    if (location.x < 0) {
-      let trs = document.querySelectorAll(".custom-table > tbody > tr");
-      let parentNode = this.state.htmlElement.parentNode;
-
-      for (let index = 0; index < trs.length; index++) {
-        
-        if (trs[index] == parentNode) {
-          Anagram.removeText(trs[index].firstElementChild.textContent);
-          parentNode.remove();
-          break;
-        }
-
-      }
-    }
+    if (location.x < 0)
+      AnagramView.remove(this.state.htmlElement.parentNode);
 
     this.state = null;
   },
@@ -157,11 +145,18 @@ let AnagramView = {
   /*
     Remove the graphic representation of an anagram.
   */
-  'remove': function(word) {
+  'remove': function(parentNode) {
+    let trs = document.querySelectorAll(".custom-table > tbody > tr");
 
+    for (let index = 0; index < trs.length; index++) {
+
+      if (trs[index] == parentNode) {
+        Anagram.removeText(trs[index].firstElementChild.textContent);
+        parentNode.remove();
+        break;
+      }
+
+    }
   }
 }
 
-
-//let textSource = "Sopa Vestido de Azul";
-//console.log("Prueba0: ", disarrangeTextCharacters(textSource), " - ", textSource);
