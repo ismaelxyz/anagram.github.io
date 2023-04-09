@@ -1,2 +1,3 @@
-# anagram.github.io
+# Anagrams
+
 Web page to create anagrams

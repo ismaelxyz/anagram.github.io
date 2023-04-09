@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Anagram </title>
+  </head>
+  <link rel="stylesheet" href="styles/main.css">
+  <body>
+    <header>
+
+    </header>
+    <main>
+      <article>
+        <p>
+          An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once. For example, the word anagram itself can be rearranged into nag a ram, as well as the word binary into brainy and the word adobe into abode.
+        </p>
+        <img src="images/listen.png">
+      </article>
+
+      <div class="interactive-area">
+        <div>
+          <input
+            onkeyup="enterPress(event)" 
+            id="anagram-input" type="text" placeholder="Word to disarrange"
+          >
+          <button 
+            id="aceept-btn" type="button" name="button"
+            onclick="AnagramView.addOrUpdate()">Aceept
+          </button>
+        </div>
+
+        <div class="div-custom-table">
+          <table class="custom-table">
+            <thead>
+              <tr class="bg-color-gray">
+                <th>Word</th>
+                <th class="text-center">Anagram</th>
+              </tr>
+
+            </thead>
+            <tbody> </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+    <footer>
+      <p>
+        Copyright &copy; 2023 Ismael Belisario, All Rights Reserved.
+      </p>
+    </footer>
+
+    <script type="text/javascript" src="scripts/anagram.js"> </script>
+
+  </body>
+</html>
