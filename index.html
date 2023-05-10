@@ -11,10 +11,24 @@
     </header>
     <main>
       <article>
-        <p>
-          An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once. For example, the word anagram itself can be rearranged into nag a ram, as well as the word binary into brainy and the word adobe into abode.
-        </p>
-        <img src="images/listen.png">
+        <div>
+          <h1>Anagram</h1>
+          <p>
+            <img src="images/listen.png" alt="Logotipo de GNU (GNU is Not Unix)" title="Logotipo de GNU (GNU is Not Unix)" width="129" height="122">
+            <br>
+            An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once. For example, the word anagram itself can be rearranged into nag a ram, as well as the word binary into brainy and the word adobe into abode. Anagrams are an excellent resource for working on literacy in the classroom and as support material with students who have or may have literacy problems.
+          </p>
+        </div>
+      </article>
+
+      <article>
+        <div>
+          <h2>About</h2>
+          <p>
+            <br>
+            This is a help application for those who want to create anagrams, it takes a word and rearranges it so that it doesn't look like the original word, it's free, intuitive, it saves you time.
+          </p>
+        </div>
       </article>
 
       <div class="interactive-area">
@@ -41,7 +55,17 @@
             <tbody> </tbody>
           </table>
         </div>
+
+        <!-- interactive-area -->
       </div>
+        <div class="edit">
+          <input class="anagram-edit" disabled type="text">
+          <input class="word-edit" type="text">
+          <div class="btns-area">
+            <button onclick="AnagramView.remove()"> Delete </button>
+            <button onclick="AnagramView.accept()"> Accept </button>
+          </div>
+        </div>
 
     </main>
     <footer>
